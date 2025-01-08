@@ -123,3 +123,96 @@ console.log(user1);
 //nested destructing
 // const [{firstname: user1firstnme} {gender:user3gender}];
 // console.log(user1firstnme);// doubt
+//function declaration function expression
+//function singHappyBirthday(){
+//     console.log("happy birthday to you.......");
+// //}
+// let singHappyBirthday = function(){
+//     console.log("happy birth birthday to ypiuu")
+// }
+// singHappyBirthday();
+// const sumThreeNumbers = function(number1,number2,number3){
+//     //console.log(2+4);
+//     return number1+number2+number3;
+// }
+// sumThreeNumbers();
+// //call,envoke,run// dont repeat yourself
+// //console.log(twoPlusFour());
+// const returnValue =sumThreeNumbers(8,5,8);
+// console.log(returnValue);
+// // odd even
+// //input : 1 number
+// function isEven(number){
+//     if(number% 2===0){
+//         return true;
+//     }
+//         return false;
+//     }
+
+// console.log(isEven(71));
+// function firstChar(anyString){
+//     return anyString[4];
+// }
+// console.log(firstChar("chinmoy"));
+// //input : array, target -number output : index of target present in array
+// function findTarget(array,target){
+//     for(let i=0; i<array.length;i++){
+//         if(array[i]===target){
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
+// const myArray9 =[1,4,7,8];
+// const ans = findTarget(myArray9, 5);
+// console.log(ans);
+// arrow function
+const singHappyBirthday = () =>{
+    console.log("happy birth birthday to ypiuu")
+}
+singHappyBirthday();
+const sumThreeNumbers = (number1,number2,number3) =>{
+    //console.log(2+4);
+    return number1+number2+number3;
+}
+const ans = sumThreeNumbers(9,80,70);
+console.log(ans);
+const isEven = number=>
+    number%2===0;
+console.log(isEven(70));
+// hoisting
+// hello();
+// const hello = function(){
+//     console.log("hello world");
+// }
+// function inside function
+function app(){
+    const myFunc =()=>{
+        console.log("hello my myFunc")
+    }
+    const addTwo =(num1,num2)=>{
+         return num1 +num2;
+    }
+    const mul =(num1,num2)=>{
+        return num1*num2;
+    }
+    console.log("hellloo good morning");
+    myFunc();
+    console.log(addTwo(4,5));
+    console.log(mul(7,8));
+}
+app();
+// lexical scope
+const myVar5 ="value";
+function myApp(){
+    function myName(){
+        const mySchool =()=>{
+            console.log("the name of my school is",myVar5);
+        }
+        mySchool();
+    }
+    console.log(myVar5);
+    myName();
+}
+myApp();
+// scope
