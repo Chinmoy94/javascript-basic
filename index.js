@@ -215,4 +215,103 @@ function myApp(){
     myName();
 }
 myApp();
-// scope
+// class
+class product{
+    constructor(n,p,d){
+       // console.log("called constructor");
+        this.name =n;
+        this.price =p;
+        this.discount =d;
+       // console.log(this);
+    }
+    display(){
+        console.log("name of the product is", this.name," and price is", this.price);
+    }
+    discountedPrice(){
+        let newPrice = this.price *(Math.floor(100-this.discount)/100);
+        return newPrice;
+    }
+}
+
+const i1 = new product("iphone",90000,10);
+console.log(i1.discountedPrice());
+const i2 = new product("samsung",80000,10);
+console.log(i2.discountedPrice());
+console.log(i1,i2);
+class product1 {// class is like a template 
+    // object oriented programming
+  // a class may only have one constructor
+    constructor(n1,p1){
+        console.log("calling the constructor");
+  this.name1 = n1;
+  this.price1 = p1;// data member
+  // return can call back
+   return{ x:34, y:78};
+  //this  keyword actually to the same empty object we created
+    }
+ display(){
+   
+    // class methods are nothing but functions, they repesent behaviour member function
+    console.log("displaying a product", this.name1,this.price1);
+ }
+}
+const p = new product1("samsung", 56000);//new keyword crete empty plain js object, new also called operator
+console.log(p);
+// defalut constructor automatically print
+//property
+// poses behave 
+//p.display();
+// inbuilt constructor
+// string object special object
+let x = new String();
+console.log(x);
+let y = new Number();
+console.log(y);
+//dry principle - dont reapet yourself
+// function constructors
+function Product2(n4,p4){
+    this.name3 = n4;
+    this.price3 = p4;
+    //return{ x:78,y:89};
+
+}
+const p2 = new Product2("sony",69000);
+console.log(p2);
+// this is js is diff other lang
+//this keyword refers to the context from where we call the function
+// if you dont return js returns the newly created obj
+// if you return primitive, then also we get newly created obj
+// if you return custom obj
+const Product =function(n,p) {
+    this.name =n;
+    this.price =p;
+}
+const p5 =new Product("btoooun",877);
+console.log(p5);
+let obj ={
+    x:6, y:8,
+    display(){
+        console.log(this.x);
+    }
+}
+obj.display();
+//in arrow function this cant functionable call site but lexically we can do it
+let obj4 = {
+    x:45,
+    fun(){
+        console.log(this);
+        y = {
+            x:80,
+            gun :()=>{
+                console.log(this.x);
+            }
+        }
+    }
+}
+obj4.fun();
+//get set
+class Product7{
+     discount;
+     #rating =99;
+     
+}
