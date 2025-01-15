@@ -313,18 +313,3 @@ console.log(fruts);
 // console.log(movie4);
 //for of loop in array
 //loop use in itratre
-// function fun() {
-//        var i =6;
-//        while(i<9){
-//         var x =i;
-//         i++
-//        }
-//        console.log(x);
-// }
-// fun();
-function fun(){
-  for(let i=0; i<10; i++){
-      }
-      console.log(i);
-}
-fun();
